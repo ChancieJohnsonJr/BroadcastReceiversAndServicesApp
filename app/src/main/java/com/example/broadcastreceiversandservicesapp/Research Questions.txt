@@ -1,0 +1,47 @@
+1. What is the difference in an started service and a bound service?
+
+A started service will run once started until task is complete, then will stop unless topped manually. There
+are 3 different kinds (foreground, background, intent). Bound services Service will run once bound to until
+that service is unbounded. They use a client/server relationship. They uses the ServiceConnection object
+for communication between the component which the service is bound to and the service itself.
+
+2. Define what a observer/ subscriber relation is.
+
+An observer/subscriber relation is When objects change, ObjectBox notifies subscribed data observers.
+They can either subscribe to changes of certain object types (via BoxStore) or to query results. To
+create a data observer you need to implement the generic io.objectbox.reactive.DataObserver interface
+
+3. Define what a client/server relation is.
+
+The client-server relationship describes the relation between the client and how it makes a service
+request to the server, and how the server can accept these requests, process them, and return the
+requested information to the client. Client–server model is a distributed application structure that
+partitions tasks or workloads between the providers of a resource or service, called servers, and
+service requester, called clients
+
+4. Define each of the HTTP verbs
+
+GET - request retrieves data from a web server by specifying parameters in the URL portion of the
+      request. This is the main method used for document retrieval
+POST - used to send data to the server, for example, customer information, file upload, etc. using
+       HTML forms.
+PUT - Replaces all current representations of target resource with the uploaded content. It also
+      used to request the server to store the included entity-body at a location specified by the given URL
+DELETE - Removes all current representations of the target resource given by a URI.
+OPTIONS - The OPTIONS method is used by the client to find out the HTTP methods and other options
+          supported by a web server. The client can specify a URL for the OPTIONS method, or an asterisk
+          (*) to refer to the entire server.
+CONNECT - The CONNECT method is used by the client to establish a network connection to a web server
+          over HTTP
+TRACE - The TRACE method is used to echo the contents of an HTTP Request back to the requester which
+        can be used for debugging purpose at the time of development
+
+5. Describe at least one use for each service (Foreground, Background, Intent, Bound)
+
+Foreground - Used when app in within the foreground of operation
+
+Background - Used when the app is running an operation that user may not need to know about explicitly
+
+Intent - Used when you need an operation that is not associated to Main thread
+
+Bound - Uses a client/server relationship
